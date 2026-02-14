@@ -1,7 +1,7 @@
 import os
 import time
 from board import isBoardValid, groupColours, printBoard
-from file_processing import readBoard, saveSolution
+from file_processing import readBoard, saveSolution, saveImage
 from queens import solveQueenPositions
 
 def main():
@@ -38,12 +38,19 @@ def main():
             choice = input("Apakah Anda ingin menyimpan solusi? (Y/N): ")
             
             if choice.lower() == 'y':
-                if not os.path.exists(os.path.join(base,"test","terminal")):
-                    os.makedirs(os.path.join(base,"test","terminal"))
-                
-                savePath = os.path.join(base,"test","terminal", file)
-                saveSolution(savePath, board, solution, round(elapseTime), count)
-                print("Solusi berhasil disimpan dalam folder test/terminal\n")
+                fmt = input("Pilih format (1=txt, 2=png): ").strip()
+                if fmt == '2':
+                    img_dir = os.path.join(base, "test", "image")
+                    os.makedirs(img_dir, exist_ok=True)
+                    pngPath = os.path.join(img_dir, os.path.splitext(file)[0] + ".png")
+                    if saveImage(board, solution, pngPath):
+                        print(f"Solusi PNG disimpan di {pngPath}\n")
+                else:
+                    txt_dir = os.path.join(base, "test", "text")
+                    os.makedirs(txt_dir, exist_ok=True)
+                    savePath = os.path.join(txt_dir, file)
+                    saveSolution(savePath, board, solution, round(elapseTime), count)
+                    print("Solusi TXT disimpan dalam folder test/text\n")
         else :
             print("Solusi tidak ditemukan!\n")
             

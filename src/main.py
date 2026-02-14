@@ -38,16 +38,30 @@ def main():
             choice = input("Apakah Anda ingin menyimpan solusi? (Y/N): ")
             
             if choice.lower() == 'y':
-                if not os.path.exists(os.path.join(base, "test")):
-                    os.makedirs(os.path.join(base, "test"))
+                if not os.path.exists(os.path.join(base,"test","terminal")):
+                    os.makedirs(os.path.join(base,"test","terminal"))
                 
-                savePath = os.path.join(base,"test", file)
+                savePath = os.path.join(base,"test","terminal", file)
                 saveSolution(savePath, board, solution, round(elapseTime), count)
-                print("Solusi berhasil disimpan dalam folder test\n")
+                print("Solusi berhasil disimpan dalam folder test/terminal\n")
         else :
             print("Solusi tidak ditemukan!\n")
             
+            
+def printBanner():
+    print("-------------------- Selamat datang di program QUEENS LinkedIn SOLVER --------------------")
+    print("  ___   __ __    ___    ___  ____   _____      _____  ___   _      __ __    ___  ____  ")
+    print(" /   \\ |  |  |  /  _]  /  _]|    \\ / ___/     / ___/ /   \\ | |    |  |  |  /  _]|    \\ ")
+    print("|     ||  |  | /  [_  /  [_ |  _  (   \\_     (   \\_ |     || |    |  |  | /  [_ |  D  )")
+    print("|  Q  ||  |  ||    _]|    _]|  |  |\\__  |     \\__  ||  O  || |___ |  |  ||    _]|    / ")
+    print("|     ||  :  ||   [_ |   [_ |  |  |/  \\ |     /  \\ ||     ||     ||  :  ||   [_ |    \\ ")
+    print("|     ||     ||     ||     ||  |  |\\    |     \\    ||     ||     | \\   / |     ||  .  \\")
+    print(" \\__,_| \\__,_||_____||_____||__|__| \\___|      \\___| \\___/ |_____|  \\_/  |_____||__|\\_|")
+    print("\n\n")
+    
+            
 if __name__ == "__main__":
+    printBanner()
     main()
                 
                 

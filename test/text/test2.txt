@@ -1,0 +1,11 @@
+AB#CDDDE
+AABC#DDE
+FAAAADD#
+#FAAAADE
+GGAAAA#A
+H#AAAAAA
+HHHAA#AA
+HHH#HAAA
+
+Waktu eksekusi: 0.5 ms
+Banyak kasus yang ditinjau: 105 kasus

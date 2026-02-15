@@ -33,7 +33,7 @@ def main():
             print("Solusi ditemukan!\nMenampilkan solusi : \n")
             printBoard(board, solution)
             
-            print(f"\n\nWaktu pencarian: {round(elapseTime)} ms\n")
+            print(f"\n\nWaktu pencarian: {round(elapseTime,2)} ms\n")
             print(f"Banyak kasus yang ditinjau: {count} kasus\n")
             choice = input("Apakah Anda ingin menyimpan solusi? (Y/N): ")
             
@@ -49,10 +49,13 @@ def main():
                     txt_dir = os.path.join(base, "test", "text")
                     os.makedirs(txt_dir, exist_ok=True)
                     savePath = os.path.join(txt_dir, file)
-                    saveSolution(savePath, board, solution, round(elapseTime), count)
+                    saveSolution(savePath, board, solution, round(elapseTime,2), count)
                     print("Solusi TXT disimpan dalam folder test/text\n")
         else :
             print("Solusi tidak ditemukan!\n")
+            print(f"\n\nWaktu pencarian: {round(elapseTime,2)} ms\n")
+            print(f"Banyak kasus yang ditinjau: {count} kasus\n")
+            
             
             
 def printBanner():

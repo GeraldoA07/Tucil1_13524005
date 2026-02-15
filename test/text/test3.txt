@@ -1,0 +1,11 @@
+#AAABBBB
+AAAA#BBB
+C#CCDDDD
+CCCCD#DD
+EE#EFFFF
+EEEEFF#F
+GGG#HHHH
+GGGGHHH#
+
+Waktu eksekusi: 4.61 ms
+Banyak kasus yang ditinjau: 36 kasus

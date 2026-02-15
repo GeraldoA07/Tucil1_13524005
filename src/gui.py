@@ -165,7 +165,7 @@ class QueensGUI(ctk.CTk):
 
         self.curBoard = boardData
         self.curSol = solutionData
-        self.lastElapsed = round(elapsedTime)
+        self.lastElapsed = round(elapsedTime,2)
         self.lastCaseCount = caseCount
         
         self.drawBoard()
@@ -176,7 +176,7 @@ class QueensGUI(ctk.CTk):
         newHeight = self.winfo_reqheight()
         self.geometry(f"600x{newHeight}")
         
-        messagebox.showinfo("Success", f"Selesai dalam {round(elapsedTime)} ms\nKasus: {caseCount}")
+        messagebox.showinfo("Success", f"Selesai dalam {round(elapsedTime,2)} ms\nKasus: {caseCount}")
 
     def drawBoard(self):
         self.canvas.delete("all")

@@ -1,0 +1,12 @@
+AAABBCC#D
+ABBB#CECD
+ABBBDC#CD
+A#ABDCCCD
+BBBBD#DDD
+FGG#DDHDD
+#GIGDDHDD
+FG#GDDHDD
+FGGGDDHH#
+
+Waktu eksekusi: 12 ms
+Banyak kasus yang ditinjau: 843 kasus

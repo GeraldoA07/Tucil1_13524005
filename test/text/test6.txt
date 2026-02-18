@@ -7,5 +7,5 @@ AA#GGAFF
 AAAGAAH#
 AAAAA#HH
 
-Waktu eksekusi: 8.68 ms
+Waktu eksekusi: 150.19 ms
 Banyak kasus yang ditinjau: 252 kasus

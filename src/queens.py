@@ -19,19 +19,27 @@ def isQueenValid(pos):
 
     return True
 
-def backtrack(index,colours, positions, queen):
+def backtrack(index, colours, positions, queen, rows, update):
     if index == len(colours):
-        return True,0
+        return True, 0
     
     count = 0
 
     for pos in positions[index]:
         count += 1
 
+        if update:
+            temp = [list(r) for r in rows]
+            for r, c in queen + [pos]:
+                temp[r][c] = '#'
+            for row in temp:
+                print(''.join(row))
+            print()
+
         if isQueenValid(queen + [pos]):
             queen.append(pos)
 
-            found, count1 = backtrack(index + 1, colours, positions, queen)
+            found, count1 = backtrack(index + 1, colours, positions, queen, rows, update)
             count += count1
 
             if found:
@@ -39,15 +47,15 @@ def backtrack(index,colours, positions, queen):
 
             queen.pop()
 
-    return False,count
+    return False, count
 
-def solveQueenPositions(area):
+def solveQueenPositions(area, rows, update=False):
     orderedItems = list(area.items())
     orderedItems.sort(key=lambda x: len(x[1]))
     colours = [items[0] for items in orderedItems]
     positions = [list(items[1]) for items in orderedItems]
     queen = []
-    found, count = backtrack(0, colours, positions, queen)
+    found, count = backtrack(0, colours, positions, queen, rows, update)
     if found :
         solution = {
             colours[i]: queen[i] for i in range (len(colours))

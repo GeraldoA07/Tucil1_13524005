@@ -9,5 +9,5 @@ IG#DEEDHHH
 #JJDDDDDDD
 IIJJ#JDDDD
 
-Waktu eksekusi: 150.97 ms
+Waktu eksekusi: 11535.3 ms
 Banyak kasus yang ditinjau: 18200 kasus

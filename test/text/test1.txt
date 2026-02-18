@@ -8,5 +8,5 @@ FGG#DDHDD
 FG#GDDHDD
 FGGGDDHH#
 
-Waktu eksekusi: 3 ms
+Waktu eksekusi: 499.06 ms
 Banyak kasus yang ditinjau: 843 kasus

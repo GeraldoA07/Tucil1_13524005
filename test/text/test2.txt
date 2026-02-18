@@ -7,5 +7,5 @@ H#AAAAAA
 HHHAA#AA
 HHH#HAAA
 
-Waktu eksekusi: 0.5 ms
+Waktu eksekusi: 101.49 ms
 Banyak kasus yang ditinjau: 105 kasus

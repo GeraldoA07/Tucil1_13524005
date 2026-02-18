@@ -155,7 +155,7 @@ class QueensGUI(ctk.CTk):
 
         colourGroups = groupColours(boardData)
         startTime = time.perf_counter()
-        isFound, solutionData, caseCount = solveQueenPositions(colourGroups)
+        isFound, solutionData, caseCount = solveQueenPositions(colourGroups, boardData, False)
         endTime = time.perf_counter()
         elapsedTime = (endTime - startTime) * 1000
 

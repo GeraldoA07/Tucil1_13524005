@@ -24,7 +24,7 @@ def main():
         print("\n\nMencari solusi untuk board pada file:", file,"\n")
         
         start = time.perf_counter()
-        found, solution, count = solveQueenPositions(colours)
+        found, solution, count = solveQueenPositions(colours, board, True)
         end = time.perf_counter()
         
         elapseTime = (end - start) * 1000
